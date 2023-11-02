@@ -1,63 +1,16 @@
-path = r'C:\Users\20062511d\Desktop/data.xlsx'  
-
-import datetime 
-
-from datetime import date, timedelta 
-
-import pandas as pd  
-
-  
-
-data = pd.read_excel(path)  
-
-print(data)  
-
-  
-
-print (data["CalDueDate"]) 
-
-print (data[["CalDueDate"]]) 
-
-  
-
-  
-
-td = date.today() 
-
-print(" Get the today date in Python is: ", td)   
-
-days_after = (date.today()+timedelta(days=30)).isoformat()  
-
-  
-
-import brics 
-
-brics["CalDueDate"] 
-
- 
-
---------------------------------- 
-
-Select CalDueDate, ROW_NUMBER() OVER(ORDER BY CalDueDate) from 
-
-(SELECT distinct CAST(CalDueDate as DATE) CalDueDate FROM data) s 
-
-WHERE CalDueDate <= 'td = date.today()' 
-
-ORDER BY CalDueDate 
-
- 
-
- 
-
- 
-
- 
-
- 
-
 path = r'C:\Users\20062511d\Desktop/data.xlsx'  #insert the path 
 
+  
+
+import pandas as pd   
+
+  
+
+data = pd.read_excel(path)  #read the file  
+
+  
+
+print( data[['Equip.']].value_counts()) 
   
 
 import pandas as pd   
